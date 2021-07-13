@@ -1,0 +1,108 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.intro {
+  height: 100vh;
+}
+
+.intro video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.intro h1 {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+}
+
+section{
+  height: 100vh;
+  color: black;  
+}
+
+section h1{
+  padding-top: 300px;
+  text-align: center;
+  font-size: 60px;
+}
+
+.dark
+.sun::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  background: #222833;
+  border-radius: 50%;  
+}
+
+.bg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 280px;
+  background: url(bg.png);
+  animation: animateBg 25s linear infinite;
+  background-size: 1500px;
+  background-repeat: repeat-x;
+}
+
+@keyframes animateBg {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1500px;
+  }
+}
+
+.car1 {
+  position: absolute;
+  left: -200px;
+  bottom: 20px;
+  max-width: 200px;
+  z-index: 10;
+  animation: car1 18s linear infinite;
+}
+
+@keyframes car1 {
+  0% {
+    transform: translateX(0px);
+  }
+  90%, 100% {
+    transform: translateX(calc(100vw + 200px));
+  }
+}
+
+.car2 {
+  position: absolute;
+  right: -200px;
+  bottom: 50px;
+  max-width: 200px;
+  z-index: 9;
+  animation: car2 12s linear infinite;
+}
+
+@keyframes car2 {
+  0% {
+    transform: translateX(0px) rotateY(180deg);
+  }
+  90%, 100% {
+    transform: translateX(calc(-100vw - 200px)) rotateY(180deg);
+  }
+}
